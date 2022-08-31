@@ -1,0 +1,258 @@
+body {
+    font-size: .875rem;
+}
+
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    /* rtl:raw:
+  right: 0;
+  */
+    bottom: 0;
+    /* rtl:remove */
+    left: 0;
+    z-index: 100;
+    /* Behind the navbar */
+    padding: 48px 0 0;
+    /* Height of navbar */
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        top: 5rem;
+    }
+}
+
+.sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* Scrollable contents if viewport is shorter than content. */
+}
+
+.sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #727272;
+}
+
+.sidebar .nav-link.active {
+    color: #2470dc;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+    color: inherit;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+
+/*
+ * Navbar
+ */
+
+.navbar-brand {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, .25);
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .navbar-toggler {
+    top: .25rem;
+    right: 1rem;
+}
+
+.navbar .form-control {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.form-control-dark {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+    border-color: transparent;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+.job-form label {
+    font-weight: 500;
+}
+
+.card.check-box {
+    height: 150px;
+    overflow: auto;
+}
+
+.form-check {
+    font-size: 16px;
+}
+
+
+/* ---------------------------------- */
+
+
+/* Notification Boxes
+------------------------------------- */
+
+#result .success,
+.notification {
+    line-height: 24px;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 20px 26px;
+    padding-right: 50px;
+    border-radius: 3px;
+}
+
+.notification p {
+    margin: 0;
+    font-size: 15px;
+}
+
+#result .success,
+.notification.success {
+    background-color: #EBF6E0;
+}
+
+#result .success,
+.notification.success,
+.notification.success a,
+.notification.success strong {
+    color: #5f9025;
+}
+
+.notification.error {
+    background-color: #ffe9e9;
+}
+
+.notification.error,
+.notification.error a,
+.notification.error strong {
+    color: #de5959;
+}
+
+.notification.warning {
+    background-color: #FBFADD;
+}
+
+.notification.warning,
+.notification.warning a,
+.notification.warning strong {
+    color: #8f872e;
+}
+
+.notification.notice h4 {
+    font-size: 19px;
+    margin: 3px 0 15px 0;
+}
+
+.notification.notice h4,
+.notification.notice,
+.notification.notice a,
+.notification.notice strong {
+    color: #3184ae
+}
+
+.notification.notice {
+    background-color: #E9F7FE;
+}
+
+.notification.notice.large {
+    padding: 32px 36px;
+}
+
+.notification strong {
+    font-weight: 700;
+}
+
+.notification a {
+    text-decoration: underline;
+}
+
+body .notification strong {
+    border: none;
+}
+
+.notification.success .close,
+.notification.error .close,
+.notification.warning .close,
+.notification.notice .close {
+    padding: 0px 9px;
+    position: absolute;
+    right: 0;
+    top: 22px;
+    display: block;
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+}
+
+.notification.notice p span i {
+    font-weight: 500;
+}
+
+.notification a.button {
+    float: right;
+    color: #fff;
+    margin-top: 3px;
+}
+
+.notification.notice a.button {
+    background-color: #388fc5;
+}
+
+.notification.warning a.button {
+    background-color: #dfbe51;
+}
+
+.notification.error a.button {
+    background-color: #d34c4c;
+}
+
+.notification.success a.button {
+    background-color: #79ba38;
+}
+
+.notification.closeable a.close:before {
+    content: "\ea02";
+    font-family: "Feather-Icons";
+    position: absolute;
+    right: 25px;
+    top: 0;
+    cursor: pointer;
+    font-weight: 600;
+}
